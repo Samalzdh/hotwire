@@ -1,0 +1,31 @@
+<div class="d-flex justify-content-center align-items-center vh-70 mt-4 mb-4">
+  <div class="card border-primary mb-3 " style="width: 50%; min-width: 50%; padding: 20px;">
+    <h2 class="card-header text-center">Nom de l'évènement</h2>
+    <div class="card-body">
+      <h4 class="card-title">Date de l'évènement</h4>
+      <h5 class="card-subtitle text-muted">Admin de l'évènement</h5>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-block user-select-none" width="100%" height="200" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
+      <image href="<%= image_path('Soeursmalsaine.jpg') %>" width="100%" height="100%" />      <text x="50%" y="50%" fill="#dee2e6" dy=".3em"></text>
+    </svg>
+    <div class="card-body">
+      <p class="card-text">Description de l'évènement. Description de l'évènement. Description de l'évènement. Description de l'évènement. Description de l'évènement. Description de l'évènement. Description de l'évènement.</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Heure de début : 20:00 </li>
+      <li class="list-group-item">Durée : 2h00</li>
+      <li class="list-group-item">Participants inscrits : 35</li>
+    </ul>
+    <div class="card-body">
+      <button type="button" class="btn btn-primary btn-lg">Billet : 10 € </button>
+    </div>
+    <div class="card-body">
+      <%= render 'layouts/users_list' %>    
+    </div>
+    <div class="card-body">
+      <a href="#" class="card-link">Précedent</a>
+      <a href="#" class="card-link">Retour</a>
+      <a href="#" class="card-link">Suivant</a>
+    </div>
+  </div>
+</div>

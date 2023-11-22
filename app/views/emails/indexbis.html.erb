@@ -1,0 +1,43 @@
+<div class="button btn-primary">
+  <%= button_to "recevoir un mail", emails_path, data: { turbo_frame: "new_email" }, class: "btn btn-primary" %>
+</div>
+
+
+<div class="container mt-5">
+  <div class="row">
+    <!-- les mails -->
+    <div class="col-md-6">
+      <h2>Liste des emails</h2>
+      <%= turbo_frame_tag "create_email" do %>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Objet</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @emails.each do |email| %>
+            <tr class="email-row" data-email-id="<%= email.id %>">
+              <td><%= email.object %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <% end %>
+    </div>
+    <%= turbo_frame_tag "new_email" do %>
+      <%= render "email", email: @email%>
+        <%# <%= render "user_details", user: @user %> 
+    <% end %>
+    
+    <!-- les mails sélectionné" -->
+    <div class="col-md-6">
+      <h2>Email sélectionné</h2>
+      <div id="selected-email-content">
+            <%= turbo_frame_tag "show_email" do %>
+      <% end %>
+        <!-- Le contenu de l'email sélectionné  -->
+      </div>
+    </div>
+  </div>
+</div>
